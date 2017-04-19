@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Inknut+Antiqua|Lato');
+/*
+    font-family: 'Inknut Antiqua', serif;
+    
+    font-family: 'Lato', sans-serif;
+
+*/
+
+body {
+    background-color: #f3e7ee;
+    padding: 5px;
+}
+
+header {
+    font-family: 'Inknut Antiqua', serif;
+    background-color:  #131327;
+    color: #f3e7ee;
+}
+
+h1 {
+    margin: 0px;
+}
+
+img {
+    margin:5%;
+    width:90%;
+    border: solid ;
+    border-color: #131327;
+}
+
+p {
+   font-family: 'Lato', sans-serif; 
+   padding: 5%;
+}
+
+
+.cont1 {
+   
+}
+
+.flexCont {
+    display: flex;    
+}
+
+.headerflex1 {
+    flex: 2;    
+}
+
+.headerflex2 {
+    flex: 8;
+    text-align: center;   
+}
+
+.sectionflex1 {
+    flex: 2;
+    text-align: justify;
+    color: #f3e7ee;
+    background-color:  #131327;     
+}
+
+.sectionflex2 {
+    flex: 8;
+    text-align: center;
+    color: #131327;
+    background-color:  #f3e7ee;
+
+}
+
+#menuButton {
+    display: none;
+}
+
+#menuDiv {
+    text-align: center;
+    background-color: #f3e7ee;
+    color:  #131327;
+}
+
+.menuLink {
+    text-align: center;
+    display: inline-block;
+    color: #131327;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.menuLink:hover {
+    color: #f3e7ee;
+    background-color:  #131327;
+}

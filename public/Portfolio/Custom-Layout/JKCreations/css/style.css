@@ -1,0 +1,312 @@
+@import 'https://fonts.googleapis.com/css?family=Kaushan+Script|Lobster';
+/*
+    font-family: 'Lobster', cursive;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Kaushan Script', cursive;
+*/
+
+a {
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 5px;
+}
+
+p, a, label, input {
+	/*font-family: 'Kaushan Script', cursive;*/
+	font-family: 'Lobster', cursive;
+	font-size: 2.7em;	
+}
+
+
+table  {
+	text-align: center;	
+}
+
+ul {
+	font-family: 'Kaushan Script', cursive;
+	text-align: left;
+	list-style: none;
+	margin: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+li > button {
+	width: 90%;
+}
+
+img {
+	width: 30%;
+	float: left;
+}
+
+
+h1 {
+	font-family: 'Kaushan Script', cursive;
+	text-align: center;
+	font-size: 5em;
+	margin: 0;
+	padding: 30px;
+	background: rgba(3,0,38,.5);
+	border-radius: 0 0 5px 5px;
+}
+
+h2 {
+	font-family: 'Lobster', cursive;
+	text-align: center;
+	font-size: 4em;
+	margin: 0%;
+	margin-top: 5%;
+	padding: 0;
+	padding-left: 30px;
+	padding-top: 10px;
+}
+
+h3 {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 1.5em;
+	margin: 15%;
+}
+
+body {
+	/*max-width: 1100px;*/
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	display: flex;
+	margin-bottom: 0;
+}
+
+footer {
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+
+section {
+	width: 100%;
+	height: 800px;
+	color: white;
+	background-image: url(../images/lavender.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	margin-top: 0px;
+}
+
+button, select, .amount_btn {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 2.5em;
+	width: 30%;
+	height: 50px;
+	margin: 2%;
+	border: solid;
+	border-color: rgba(3,0,38,1.0);
+	border-radius: 5px;
+	border-width: 1px;
+	background-color: white;
+	
+}
+
+button:hover, select:hover {
+	background-color: purple;
+}
+
+.amount_btn {
+	width: 3em;
+	height: 50px;
+}
+
+.checkout_cart_flex1 {
+	flex: 3;
+	text-align: left;
+	padding-left: 5%;
+}
+
+.checkout_cart_flex2 {
+	flex: 2;
+	text-align: right;
+	padding-right: 5%;
+}
+
+.header_btn {
+	text-align: center;
+	margin:0;
+	color: white;
+	background-color: #030027;
+	border: none 
+}
+
+.inline {
+	display: inline;
+}
+
+
+.flex {
+	display: flex;
+	width: 100%;
+	color: white;
+}
+
+.flex2, .flex3 {
+	display: block;
+	width: 100%;
+	color: white;
+}
+
+.flex3 {
+	padding-top: 5%
+}
+
+.cont {
+	width: 100%;
+	color: white;
+}
+
+.header1 {
+	background-color: #030027;
+	flex: 2;
+	min-width: 100px;
+	text-align: center;
+}
+
+.header2 {
+	background-color: white;
+	flex: 5; 
+}
+
+.header3 {
+	background-color: #030027;
+	flex: 2;
+	text-align: center;
+}
+
+.menu_item:hover {
+	background: white;
+	color: #030027;
+}
+
+.fbox, .fbox2 {
+	text-align: center;
+	background: rgba(3,0,38,.5);
+	margin: 5%;
+	margin-right: 0;
+	padding: 2%;
+	width: 90%;
+	border-radius: 5px;
+}
+
+.fbox {
+	flex: 3;
+}
+
+.fbox2 {
+	flex: 2;
+}
+
+
+.dropdown {
+	display: none;
+	position: absolute;
+	border: solid;
+	border-color: rgba(3,0,38,1.0);
+	border-radius: 5px;
+	border-width: 1px;
+	background-color: rgba(3,0,38,.5);
+	color: black;
+}
+
+.hidden {
+	display:none;
+}
+
+.full_img {
+	width: 95%
+}
+
+#checkOut_div {
+	position: absolute;
+	background: #030027;
+	width: 100%;
+	color: white;
+}
+
+#checkout_addr_div{
+	width: 100%;
+	border-left:solid;
+}
+
+#checkout_cart_div{
+	width: 100%;
+}
+
+#cart {
+	left: 0%;
+}
+
+#menu, #cart {
+	display: none;
+	position: absolute;
+	width: 100%;
+	margin:0;
+	color: white;
+	background-color: #030027;
+}
+
+
+@media screen and (min-width: 1001px){
+	p, a, label, input, button, select, .amount_btn {	
+	font-size: 1.2em;
+	}
+
+	h2 {
+	font-size: 3em;	
+	margin-top: 0%;
+	}
+
+	h3 {
+		margin: 5%; 
+	}
+
+	/*.fbox {
+		width: 40%;
+	}*/
+
+	.full {
+		width: 90%;
+	}
+
+	.flex2, .flex3 {
+	display: flex;
+	}
+
+
+	.header1, .header3 {
+	flex: 1;
+	}
+
+	.header2 {
+	flex: 5; 
+	}	
+
+	#menu, #cart {
+		width: 25%
+	}
+
+	#cart {
+		left: 75%
+	}
+
+	#checkout_addr_div{
+	flex: 6;
+	width: 100%
+	}
+
+	#checkout_cart_div{
+	flex: 4;
+	width: 100%
+	}
+}

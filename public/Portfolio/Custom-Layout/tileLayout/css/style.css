@@ -1,0 +1,226 @@
+@import 'https://fonts.googleapis.com/css?family=Oswald|Suez+One|Permanent+Marker';
+
+body {
+	margin:0;
+	font-size: 100%;
+	line-height: 1.6875;
+	font-family: 'Suez One', serif;
+}
+
+video {
+	width:100%;
+
+}
+
+p {
+	margin: 5%;
+}
+
+
+.body {
+	font-family: 'Oswald', sans-serif;
+	height: 640px;
+	width: 99%;
+	margin: 0px;
+	padding: 5px;
+    color: #04080f;
+}
+
+.boxHeader {
+	text-align: left;
+	width: 100%;
+	border-bottom: solid;
+	border-width: 2px;
+	background: #4472ca;
+	border-color: #4472ca;
+}
+
+.boxHeader > h3 {
+	margin-top: 0px;
+	margin-bottom: 2px;
+	color: white;
+	margin-left: 10px;
+}
+
+.bgcolor {
+	background-color: #4472ca;
+}
+
+img {
+	width: 50%;
+}
+
+
+.badge {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 10px;
+    width:20%;
+}
+
+
+.cont {
+	padding: 0px;
+	margin: 5px;
+	border: solid;
+	border-width: 2px;
+	border-radius: 2px;
+	border-color: #4472ca;
+}
+
+.menuBtn {
+	display: block;
+	width: 100%;
+	border-bottom: solid;
+	border-color: #4472ca;
+	border-width:1px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+}
+
+.menuBtn:hover {
+	background-color: #4472ca;
+}
+
+.hide {
+	display:none;
+}
+
+.show:hover{
+	display: block;
+}
+
+
+.flexcont {
+	display: block;
+}
+
+.flexcontKeep, .flexcont2 {
+	display: flex;
+}
+
+.headminheight {
+	min-height: 250px ;
+}
+
+.flexcontCol {
+	/*display: flex;
+	flex-direction: column;*/
+}
+
+.ftBtn {
+	font-family: 'Permanent Marker', cursive;
+	display: block;
+	border:solid;
+	border-radius: 5px;
+	border-color: white;
+	padding:15px;	
+}
+
+.ftBtn:hover {
+	background-color: #4472ca;
+}	
+
+.grow {
+	flex-grow:1;
+}
+
+.flexbody6 {
+	flex: 6 ;
+}
+
+.bg {
+	background-image: url(../img/clouds2e.svg)
+}
+
+
+.flex8 {
+	flex: 8;
+}	
+
+
+.flex7 {
+	flex: 7;
+}
+
+.flex6 {
+	flex: 6;
+}
+
+.flex5 {
+	flex: 5;
+}
+
+.flex4 {
+	flex: 4;
+}
+
+.flex3 {
+	flex: 3;
+}
+
+.flex2 {
+	flex: 2;
+}
+
+.flex1 {
+	flex: 1;
+}
+
+.flex0 {
+	flex: 0;
+;
+}
+
+#footer > .flex1:hover {
+	flex: 16;
+	transition: width 0.7s ease-in-out
+}
+
+#webdev {
+	font-family: 'Permanent Marker', cursive;
+	text-align: left;
+	font-size: 3vw;
+	margin: 0;
+	padding: 0;
+	transform: translate(0,-50%) rotate(-20deg);
+}
+
+#shue_it {
+	font-family: 'Suez One', serif;
+	text-align: center;
+	font-size: 5vw;
+	margin: 0;
+	padding: 0;
+}
+
+
+@media (min-width: 1024px) {
+
+	.body {
+		width:1024px;
+	}
+
+	.hide {
+		display: block;
+	}
+
+	.flexcont {
+		display: flex;
+	}
+
+	#webdev {
+		font-size: 3.19em;
+	}
+
+	.flexcont2 {
+		display:block;
+	}
+
+	#shue_it {
+		font-size: 5em;
+	}
+
+
+}

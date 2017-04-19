@@ -1,0 +1,9 @@
+{
+	"name":"nodeServer",
+	"version":"0.0.2",
+	"description":"basic Node Server",
+	"dependencies":{
+		"mime":"~1.2.7",
+		"request":"~2.79.0"
+	}
+}

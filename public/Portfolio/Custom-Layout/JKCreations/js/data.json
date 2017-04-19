@@ -1,0 +1,34 @@
+{
+	"scents": [
+		"lavender",
+		"Cinnimon",
+		"Citrus"
+	],
+	"colors": [
+		"red",
+		"blue",
+		"green",
+		"white",
+		"yellow",
+		"orange"
+	],
+	"products": [
+		{
+			"id": "indv_tart",
+			"description": "Indvidual Scented Tarts",
+			"text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada purus nibh, sed convallis ex interdum vitae. Nam maximus vitae magna vitae pellentesque. Nulla facilisi. Nunc dictum urna tincidunt est commodo, nec vestibulum tortor commodo. Nulla facilisi. Aenean at quam rhoncus nulla egestas semper sit amet eget tortor. Nulla mollis erat vel ante suscipit feugiat. Nulla interdum orci id fringilla lacinia.",
+			"cost": "1.00",
+			"min":"4",
+			"image":"images/indv_tarts.svg"
+		},
+		{
+			"id": "clamshell_tart",
+			"description": "Clamshell Scented Tarts",
+			"text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada purus nibh, sed convallis ex interdum vitae. Nam maximus vitae magna vitae pellentesque. Nulla facilisi. Nunc dictum urna tincidunt est commodo, nec vestibulum tortor commodo. Nulla facilisi. Aenean at quam rhoncus nulla egestas semper sit amet eget tortor. Nulla mollis erat vel ante suscipit feugiat. Nulla interdum orci id fringilla lacinia.",
+			"cost": "2.50",
+			"min":"1",
+			"image":"images/clamshell_tarts.svg"
+		}
+	]
+
+}

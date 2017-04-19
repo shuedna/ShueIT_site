@@ -1,0 +1,405 @@
+@import 'https://fonts.googleapis.com/css?family=Oswald|Suez+One|Permanent+Marker';
+
+
+body {
+	padding:0;
+}
+
+.dim {
+	background-color:rgba(57, 60, 57, .7);
+	position:fixed;
+	width:100%;
+	min-height: 400px;
+	z-index:3;
+	top:0;
+}
+
+.messageBox {
+	background-color:rgba(57, 60, 57, 1);
+	border:solid;
+	border-color: white;
+	position:absolute;
+	width:99.9%;
+	min-height: 300px;
+	z-index:4;
+	top:75px;
+	left:.01%;
+}
+
+
+
+.mobilehide, .mobilehideblock {
+	display: none;
+}
+
+.progressbar {
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.progress {
+  background-color: white;
+  height: 20%;
+  min-height:10px;
+  margin-top:12.5px;
+}
+
+.icon {
+	width: 55px;
+	float:right;
+}
+
+.icon2{
+	width: 40px;
+	float:right;
+}
+
+.button > img {
+	width:100%;
+	margin-top:12.5%;
+}
+
+.img1 {
+	width: 65.59%;
+}
+
+.img2 {
+	width:87.5%;
+}
+
+.img3 {
+  width:50%;
+}
+
+.imgquarter {
+	width:24%;
+}
+
+.me {
+    border:solid;
+	border-radius:50%;
+	width: 50%;
+	margin-left:25%;
+}
+
+
+.date {
+	text-align:left;
+}
+
+#dropzone {
+	border:dotted;
+	min-height: 4em;
+}
+
+#dropzone > p {
+	margin:0;
+}
+
+.blogimg {
+    border:solid;
+	border-color: white;
+	border-radius:50%;
+	width: 40%;
+	margin-top:-1.5em;
+}
+
+.blogimgListSize {
+	width: 10%;
+	height: 10%;
+}
+
+.button {
+	color:white;
+	border-color:white;
+	border-radius:0;
+	background-color:#393c39;
+}
+
+.buttonWhite {
+	color:#393c39;
+	border-color:#393c39;
+	border-radius:0;
+	background-color:white;
+}
+
+input.button, textarea.button {
+	text-align: left;
+	width:100%;
+	text-transform: none; 
+}
+
+
+.bgblue {
+	border:solid;
+	border-color: #4A6584;
+	background-color: #4A6584;
+	color:white;
+}
+
+.dropbtn3 {
+	margin-bottom: 25px;
+}
+
+.date {
+	/*border-left:solid;
+	border-bottom:solid;
+	border-right:solid;
+	border-color: #4A6584;*/
+	text-align:right;
+	width:30%;	
+}
+
+.header {
+	background-color: #393C39;
+	color:white;
+}
+
+.hide {
+	display: none;
+}
+
+.center {
+  text-align: center;  
+}
+
+.cptaMargin {
+	margin-left:0;
+	margin-bottom: 10px;
+}
+
+.justify {
+	text-align: justify;
+}
+
+.textleft {
+	text-align: left;
+}
+
+.textright {
+	text-align: right;
+}
+
+.margin {
+	margin-left:5%;
+	margin-right:5%;
+	margin-top:2.5%;
+	margin-bottom:2.5%;
+}
+
+.marginbottomzero {
+	margin-bottom:0;
+}
+
+
+.title {
+	font-family: 'Permanent Marker', cursive;	
+}
+
+.textred {
+	color: #e74500;
+}
+
+.textblue {
+	color: #4a6584;
+}
+
+.bold{
+	
+	font-weight: bold;
+	text-shadow: 1px 1px 2px black; 
+}
+
+.flex {
+	display:flex;
+}
+
+.submit {
+	margin-top:2.25em;
+}
+
+.width50 {
+	width:100%
+}
+
+#sendMessage {
+	color: grey;
+}
+
+@media (min-width: 40.0rem) { 
+
+	.bgImg1, .bgImg2 {
+		background-size: 80%;
+	}
+	
+	.cptaMargin {
+		margin-left:24%;
+		margin-bottom: 10px;
+	}
+
+	
+	#menubtn {
+		display:none;
+	}
+	
+	.mobilehide {
+		display:flex;
+		margin-bottom:5px;
+	}
+	
+	.mobilehideblock {
+		display:block;
+		margin-bottom:5px;
+	}
+	
+	.messageBox {
+			position:fixed;
+			width:90%;
+			left:5%
+	}
+	
+	.first {
+      order: 1;
+    }
+
+    .second {
+      order: 2;
+    }
+	
+	.me {
+	  width: 80%;
+	  margin-left: 10%;
+	}
+	
+	.bottomborder {
+		border-bottom:solid;
+		border-color: #4A6584;
+		
+	}
+	
+	.width50 {
+		width:50%;
+	}
+	 
+}
+
+/* Larger than tablet screen */
+@media (min-width: 80.0rem) { 
+
+
+	.bgImg1, .bgImg2  {
+		background-size: 80%;
+	}
+	
+	.cptaMargin {
+		margin-left:34%;
+		margin-bottom: 10px;
+	}
+
+	#menubtn{
+		display:none;
+	}
+	
+	.mobilehide {
+		display:flex;
+		margin-bottom:5px;
+	}
+	
+	.mobilehideblock {
+		display:block;
+		margin-bottom:5px;
+	}
+	
+	.messageBox {
+			position:fixed;
+			width:90%;
+			left:8.5%
+	}
+	
+	.first {
+      order: 1;
+    }
+
+    .second {
+      order: 2;
+    }
+	
+	.me {
+	  width: 80%;
+	  margin-left: 10%;
+	}
+	
+	.bottomborder {
+		border-bottom:solid;
+		border-color: #4A6584;
+		
+	}
+	
+	.width50 {
+		width:50%;
+	}
+	 
+}
+
+/* Larger than desktop screen */
+@media (min-width: 120.0rem) {
+
+
+	.bgImg1 {
+		background-size: 80%;
+	}
+
+	.bgImg1 {
+		background-size: 80%;
+	}
+	
+	.cptaMargin {
+		margin-left:34%;
+		margin-bottom: 17px;
+	}
+
+	#menubtn {
+		display:none;
+	}
+	
+	.mobilehide {
+		display:flex;
+		margin-bottom:5px;
+	}
+	
+	.mobilehideblock {
+		display:block;
+		margin-bottom:5px;
+	}
+	
+	.messageBox {
+			position:fixed;
+			width:80%;
+			left:10%
+	}
+	
+	.first {
+      order: 1;
+    }
+
+    .second {
+      order: 2;
+    }
+	
+	.me {
+	  width: 80%;
+	  margin-left: 10%;
+	}
+	
+	.bottomborder {
+		border-bottom:solid;
+		border-color: #4A6584;
+		
+	}
+	
+	.width50 {
+		width:50%;
+	}
+	 
+ }

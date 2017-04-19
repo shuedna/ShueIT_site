@@ -1,0 +1,105 @@
+<!DOCUMENT HTML>
+<head>
+    <title>JK Creations</title>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<header>
+		<div class="header1">
+			<h3><a href="">Menu</a></h3>
+		</div>
+		<div class="header2">
+			<h2>JK Creations</h2>
+		</div>
+		<div class="header3">
+			<a onclick="dropdown('cart')" class="header_btn" href="#"><h3>Cart</h3></a>
+			<div class="dropdown" id="cart">
+				<h3>Cart</h3>
+				<hr/>
+				<ul id="cart_ul">
+				</ul>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="jt">
+			<h1>Hand-Made Tarts</h1>
+		</div>
+		<div class="flex">
+			<div class=fbox>
+				<h3>ClamShell Tarts</h3>
+				<p>Cost $2.50 Each</p>
+				<div>
+					<button onclick="dropdown('clamshell_scent_list');" id='clamshell_scent_btn'>Scent</button>
+					<div class='dropdown' id='clamshell_scent_list'>
+						<ul id='clamshell_scent_list_ul'>
+						</ul>
+					</div>
+					<button onclick="dropdown('clamshell_color_list');" id='clamshell_color_btn'>Color</button>
+					<div class='dropdown' id='clamshell_color_list'>
+						<ul>
+							<li><button onclick='set_obj("red", "clamshell_color")'>Red</button></li>
+							<li><button onclick='set_obj("blue", "clamshell_color")'>Blue</button></li>
+							<li><button onclick='set_obj("yellow", "clamshell_color")'>Yellow</button></li>
+							<li><button onclick='set_obj("orange", "clamshell_color")'>Orange</button></li>
+						</ul>
+					</div>
+				</div>
+				<div>
+					<button onclick="dropdown('clamshell_amount_list');" id='clamshell_amount_btn'>Amount</button>
+					<div class='dropdown' id='clamshell_amount_list'>
+						<ul>
+							<li><button onclick='set_obj(1, "clamshell_amount")'>1</button></li>
+							<li><button onclick='set_obj(2, "clamshell_amount")'>2</button></li>
+							<li><button onclick='set_obj(3, "clamshell_amount")'>3</button></li>
+							<li><button onclick='set_obj(4, "clamshell_amount")'>4</button></li>
+							<li><button onclick='set_obj(5, "clamshell_amount")'>5</button></li
+						</ul>
+					</div>
+					<button onclick='set_obj("cart", clamshell);' id='clamshell_cart_btn' >Add To Cart</button>
+				</div>
+			</div>
+			<div class=fbox>
+				<h3>Individual Tarts</h3>
+				<p>Cost $1.00 Each - 5 Min.</p>
+				<div>
+					<button onclick="dropdown('indv_scent_list');" id='indv_scent_btn'>Scent</button>
+					<div class='dropdown' id='indv_scent_list'>
+						<ul id='indv_scent_list_ul'>
+						</ul>
+					</div>
+					<button onclick="dropdown('indv_color_list');" id='indv_color_btn'>Color</button>
+					<div class='dropdown' id='indv_color_list'>
+						<ul>
+							<li><button onclick='set_obj("red", "indv_color")'>Red</button></li>
+							<li><button onclick='set_obj("blue", "indv_color")'>Blue</button></li>
+							<li><button onclick='set_obj("yellow", "indv_color")'>Yellow</button></li>
+							<li><button onclick='set_obj("orange", "indv_color")'>Orange</button></li>
+						</ul>
+					</div>
+				</div>
+				<div>
+					<button onclick="dropdown('indv_amount_list');" id='indv_amount_btn'>Amount</button>
+					<div class='dropdown' id='indv_amount_list' >
+						<ul>
+							<li><button onclick='set_obj(4, "indv_amount")'>4</button></li>
+							<li><button onclick='set_obj(8, "indv_amount")'>8</button></li>
+							<li><button onclick='set_obj(12, "indv_amount")'>12</button></li>
+							<li><button onclick='set_obj(16, "indv_amount")'>16</button></li>
+							<li><button onclick='set_obj(20, "indv_amount")'>20</button></li
+						</ul>
+					</div>
+					<button onclick='set_obj("cart", indv);' id='indv_cart_btn'>Add To Cart</button>
+				</div>
+			</div>
+		</div> 
+	</section>
+
+<footer>
+	<h6>Developed by Daniel Shue - 2016</h6> 
+</footer>
+<script src="js/scripts.js"></script>
+<script>pop_scents(["Lavender", "Blueberry", "Cinnimon", "apple Pie"], "clamshell_scent")</script>
+<script>pop_scents(["Lavender", "Blueberry", "Cinnimon", "apple Pie"], "indv_scent")</script>
+</body></html>

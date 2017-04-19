@@ -1,0 +1,247 @@
+body
+{
+  /*font-size: 40pt;*/
+  font-size:2.85em;
+  margin: 0px;
+}
+
+button {
+  font-size: .9em;
+}
+
+table {
+  /*border: solid;
+  border-radius: 10px;*/
+  margin-left: 5%;
+  text-align: left;
+  width: 90%;
+  font-size: 1.2em;
+  padding: 0;
+}
+
+thead > tr > td {
+  text-decoration: underline;
+}
+
+td {
+  margin: 0;
+  padding:0;
+  width: 50%;
+  /*border: solid;*/
+}
+
+input, select {
+  font-size: 1.2em;
+  color:white;
+  background-color:#212121;
+  border-style:none;
+  border-left:solid;
+  border-bottom:solid;
+  border-bottom-color:white;
+}
+
+input[type=radio] {
+  height: 1em;
+  width:100%;
+}
+
+.dispItemDiv {
+  margin:0px;
+  /*
+  border-top:solid;
+  border-color:#212121*/
+  display:flex;
+}
+
+.dispItemDiv2 {
+  margin:0px;
+  display:flex;
+}
+
+.dispItemDiv2 > div > h4 {
+  margin-top:0;
+  margin-bottom:0;
+}
+
+#splash {
+  text-align: center;
+  background-color: #212121;
+  color: white;
+  padding: 0px;
+  width:100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+#menu, #new, #dispItem, #entryDiv {
+  text-align: center;
+  border-top: solid;
+  padding: 0px;
+  padding-bottom: 0px;
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  top: 17.5%;
+  left: 0%;
+  overflow: auto;
+  overflow-wrap: break-word;
+}
+
+#menu, #new, #entryDiv {
+  background-color: #212121;
+  color: white;
+}
+
+#entryDiv {
+  top: 15%;
+  height: 85%;
+}
+
+
+
+#menu {
+  z-index:4;
+  display: none;
+}
+
+#dispItem {
+  background-color: WhiteSmoke;
+  color: #212121;
+}
+
+#entryDivOld {
+  background-color: #212121;
+  color: white;
+  text-align: center;
+  border-top: solid;
+  padding: 0px;
+  padding-bottom: 0px;
+  width: 81%;
+  height: 70%;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+   border:solid;
+  border-color:white;
+  border-radius:5%;
+  overflow: auto;
+  overflow-wrap: break-word;  
+}
+
+#head {
+  display: flex;
+  text-align:center;
+  background-color:#212121;
+  border-bottom:solid;
+  border-color:#212121;
+  color:white;
+  margin:0px;
+  padding:5px;
+}
+
+#head > div > button {
+  color:white;
+  background-color:#212121;
+  border:solid;
+  border-color:white;
+  border-radius:5%;
+  width:99%;
+}
+
+#dispItem > div > div > button {
+  color:#212121;
+  background-color:white;
+  border:solid;
+  border-color:#212121;
+  border-radius:5%;
+  width:80%;
+  margin: 10%;
+}
+
+button > h2 {
+  margin-bottom:10%;
+  margin-top: 10%;
+}
+
+/*#head > div > button:hover {
+  color:#212121;
+  background-color:white;
+}*/
+
+#list {
+  text-align:center;
+  background-color:#CB4335;
+  color:white;
+  border-top:solid;
+  border-color:white;
+  margin:0px;
+  padding:0px;
+  width:100%;
+  height:85%;
+  position:absolute;
+  top:17.5%;
+}
+
+#promptuserloginbox {
+  text-align:center;
+  background-color:white;
+  color:#212121;
+  padding:0px;
+  width:90%;
+  height:50%;
+  border:solid;
+  position:absolute;
+  top:25%;
+  left:5%;
+ }
+ 
+ #list > button {
+  color:#212121;
+  background-color:white;
+  font-size:1.3em;
+  width:95%;
+  padding:15px;
+  margin-left:0%;
+  margin-top:5%;
+  border:solid;
+  border-color:#212121;
+  border-radius:10px;
+ }
+ 
+/*#list > button:hover {
+  color:white;
+  background-color:#212121;
+}*/
+  
+#menu > button, #menu > div > button, #new > button, #entryDiv > button {
+  color:white;
+  background-color:#212121;
+  font-size:1.3em;
+  width:95%;
+  padding:15px;
+  margin-left:0%;
+  margin-top:5%;
+  border:solid;
+  border-color:white;
+  border-radius:10px;
+}
+ 
+/*#menu > button:hover {
+  color:#212121;
+  background-color:white;
+  }*/
+  
+ /* button:hover {
+	transform: scale(.9);
+  }*/
+  
+/*button:hover{animation:fullScale 1s;}
+@keyframe fullScale{
+    from{
+        transform:scale(0);
+    }
+    to{
+        transform:scale(1);
+    }
+}*/

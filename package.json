@@ -1,0 +1,17 @@
+{
+  "name": "blogger",
+  "version": "0.0.1",
+  "description": "blog server ",
+  "dependencies": {
+    "dot": "^1.1.1",
+    "mime": "~1.2.7",
+    "pouchdb-server": "latest",
+    "request": "~2.79.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Shue",
+  "license": "ISC"
+}

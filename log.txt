@@ -1,0 +1,24 @@
+[Wed, 01 Mar 2017 01:48:49 GMT] [info] [<0.000.0>] pouchdb-server has started on http://127.0.0.1:5984/
+[Wed, 01 Mar 2017 01:48:49 GMT] [info] [<0.000.0>] navigate to http://127.0.0.1:5984/_utils for the Fauxton UI.
+[Wed, 01 Mar 2017 01:48:51 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET / 200
+[Wed, 01 Mar 2017 01:49:17 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/ 304
+[Wed, 01 Mar 2017 01:49:17 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/js/bundle-f886f8ac564b8e0419b31552879db0cd.js 304
+[Wed, 01 Mar 2017 01:49:18 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_session 304
+[Wed, 01 Mar 2017 01:49:20 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_session 304
+[Wed, 01 Mar 2017 01:49:20 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET / 304
+[Wed, 01 Mar 2017 01:49:20 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-site.png 304
+[Wed, 01 Mar 2017 01:49:20 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/fonts/fauxtonicon5.woff 304
+[Wed, 01 Mar 2017 01:49:21 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?_=1488332957913 200
+[Wed, 01 Mar 2017 01:49:21 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?startkey=%22%22&endkey=%22%E9%A6%99%22&limit=30&_=1488332957914 200
+[Wed, 01 Mar 2017 01:49:21 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 304
+[Wed, 01 Mar 2017 01:49:21 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator?_=1488332957915 200
+[Wed, 01 Mar 2017 01:49:21 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/fonts/fontawesome-webfont.woff 304
+[Wed, 01 Mar 2017 01:49:21 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users?_=1488332957916 200
+[Wed, 01 Mar 2017 01:49:56 GMT] [info] [<0.000.0>] 127.0.0.1 - - PUT /blog 201
+[Wed, 01 Mar 2017 01:49:56 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /blog/_all_docs?startkey=%22_design%2F%22&endkey=%22_design0%22&include_docs=true&limit=501 200
+[Wed, 01 Mar 2017 01:49:57 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /blog/_all_docs?limit=21 200
+[Wed, 01 Mar 2017 01:49:57 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /blog/_all_docs?startkey=%22%22&endkey=%22%E9%A6%99%22&limit=30&_=1488332957917 200
+[Wed, 01 Mar 2017 01:49:57 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/couch-watermark.png 200
+[Wed, 01 Mar 2017 12:17:58 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_membership 200
+[Wed, 01 Mar 2017 12:17:59 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_node/node1@127.0.0.1/_config 200
+[Wed, 01 Mar 2017 16:35:00 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET / 304
