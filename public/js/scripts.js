@@ -58,9 +58,9 @@
 	
 	$('#menubtn').on('click',function () {
 		if($('#menuBody').val() == "none" || $('#menuBody').val() == "" ) {
-			$('#menuBody').val('flex').removeClass('mobilehide')
+			$('#menuBody').val('flex').addClass('open')
 		}else if($('#menuBody').val() == "flex") {
-			$('#menuBody').val('none').addClass('mobilehide')
+			$('#menuBody').val('none').removeClass('open')
 		}
 		//console.log('click')
 	})

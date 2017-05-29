@@ -9,7 +9,7 @@ var req = require('request');
 
 
 var db = 'https://cdb.shueit.net';
-var consoleLogsOn = false;
+var consoleLogsOn = true;
 
 function handle (request, response, type) {
 	var data = {};
@@ -20,12 +20,57 @@ function handle (request, response, type) {
 		consolelogs(request.url)
 		if(type == 'send404'){
 			send404()
-		}else if(request.url == '/blog/') {
+		}else if(request.url == '/blog.html') {
 			blogList()
+		}else if(request.url == '/index.html'||request.url == '/') {
+			index()
+		}else if(request.url == '/about.html') {
+			about()
 		}else{
 			collectData()
 		}
 	})();
+
+	function index () {	
+		var listUrl = (db + '/blog/_design/blogList/_view/blogList')
+		req.get(listUrl, function (err,data) {
+			consolelogs('getting blog list')
+			if (err){
+				consolelogs('Db request error' + listUrl)
+				consolelogs(err)
+				consolelogs('==send404')
+				send404()
+			}else{
+				try {
+					var body = JSON.parse(data.body)
+				}catch(e){
+					var body = {}
+				}
+				if (body.error) {
+					consolelogs('DB Error')
+					//consolelogs(body)
+					send404()
+				}else{ 
+					var section = {}
+					section.rows = body.rows
+					section.title = "Shue IT Home"
+					var templateUrl = (db + '/templates/index/index2.html')
+					getTemplate(templateUrl, section, function (templateFn, section) { 
+						buildPage (templateFn, section)
+					})
+				}
+			}
+		})
+	}
+
+	function about () {
+		var section = {}
+		section.title = "Shue IT About"
+		var templateUrl = (db + '/templates/about/about.html')
+		getTemplate(templateUrl, section, function (templateFn, section) { 
+			buildPage (templateFn, section)
+		})
+	}
 	
 	function collectData () {
 		var section = {}
@@ -47,28 +92,11 @@ function handle (request, response, type) {
 					send404()
 				}else{ 
 					consolelogs(body)
-					var templateUrl = body.templateUrl
+					var templateUrl = (db + '/templates/Template1/template1.html')//body.templateUrl
 					consolelogs(templateUrl)
 					section = body.section
-					req.get(templateUrl,function (err, data) {
-						if (err) {
-							consolelogs(err)
-						}else{
-							try {
-								var dataObj = JSON.parse(data.body)
-							}catch(e){
-								var dataObj = {}
-							}
-							if (dataObj.error) {
-								consolelogs('DB Error')
-								//consolelogs(data.body)
-								send404()
-							}else{ 
-								//consolelogs(data)
-								var templateFn = dot.template(data.body)
-								buildPage (templateFn, section)
-							}
-						}
+					getTemplate(templateUrl, section, function (templateFn, section) { 
+						buildPage (templateFn, section)
 					})
 				}
 			}
@@ -78,7 +106,7 @@ function handle (request, response, type) {
 	function blogList() {
 		consolelogs('==blogList')
 		var listUrl = (db + '/blog/_design/blogList/_view/blogList')
-		var templateUrl = (db + '/templates/TemplateBlogList/template.html')
+		var templateUrl = (db + '/templates/TemplateBlogList/blogList-template.html')
 		req.get(listUrl, function (err,data) {
 			consolelogs('getting blog list')
 			if (err){
@@ -98,27 +126,11 @@ function handle (request, response, type) {
 					send404()
 				}else{ 
 					consolelogs(body)
-					req.get(templateUrl, function (err, data) {
-						consolelogs('getting template')
-						if (err) {
-							consolelogs(err)
-							send(404)
-						}else{
-							try {
-								var dataObj = JSON.parse(data.body)
-							}catch(e){
-								var dataObj = {}
-							}
-							if (dataObj.error) {
-								consolelogs('DB Error')
-								//consolelogs(data.body)
-								send404()
-							}else{ 
-								//consolelogs(data)
-								var templateFn = dot.template(data.body)
-								buildPage (templateFn, body.rows)
-							}
-						}
+					var section = {}
+					section.title = "Shue IT Blog"
+					section.rows = body.rows
+					getTemplate(templateUrl, section, function (templateFn, section) { 
+						buildPage (templateFn, section)
 					})
 				}
 			}
@@ -126,37 +138,51 @@ function handle (request, response, type) {
 	}
 	
 	function buildPage (templateFn, section) {
-		consolelogs('build page')
-		data.contents = templateFn(section)
-		sendFile(data)
+		consolelogs('build page');
+
+		(function getbase () {
+			var templateUrl = (db + '/templates/BaseTemplate/base-template.html')
+			req.get(templateUrl, function (err, data) {
+				consolelogs('getting base template')
+					if (err) {
+					consolelogs(err)
+					send(404)
+				}else{
+					try {
+						var dataObj = JSON.parse(data.body)
+					}catch(e){
+						var dataObj = {}
+					}
+					if (dataObj.error) {
+						consolelogs('DB Error')
+						//consolelogs(data.body)
+						send404()
+					}else{ 
+						//consolelogs(data)
+						var baseTemplateFn = dot.template(data.body)
+						finalBuild(baseTemplateFn)
+					}
+				}
+			})
+		})()
+
+		function finalBuild(baseTemplateFn) {
+			var contents = {};
+			contents.title = section.title
+			contents.page = templateFn(section)
+			data.contents = baseTemplateFn(contents)
+			sendFile(data)
+		}
 	};
 	
 	function send404() {
 		data.head = 404
-		var templateUrl = (db + '/templates/Template1/template.html')
+		var templateUrl = (db + '/templates/Template1/template1.html')
 		var section = {}
 		section.title = 404
 		section.body = 'Reqested page ' + request.url + ' not found'
-		req.get(templateUrl, function (err, data) {
-			if (err) {
-				consolelogs(err)
-				sendFallback404()
-			}else{
-				try {
-					var body = JSON.parse(data.body)
-				}catch(e){
-					var body = {}
-				}
-				if (body.error) {
-					consolelogs('DB Error')
-					consolelogs(data.body)
-					sendFallback404()
-				}else{
-					//consolelogs(data)
-					var templateFn = dot.template(data.body)
-					buildPage (templateFn, section)
-				}
-			}
+		getTemplate(templateUrl, section, function (templateFn, section) { 
+			buildPage (templateFn, section)
 		})
 		
 		function sendFallback404 () {
@@ -171,6 +197,32 @@ function handle (request, response, type) {
 		consolelogs('Send Page')
 		consolelogs(data.type)
 		reply.send(response, data)
+	}
+ 
+	function getTemplate (templateUrl, section, nextAction) {
+			req.get(templateUrl, function (err, data) {
+			consolelogs('getting template:' + templateUrl)
+				if (err) {
+				consolelogs(err)
+				send(404)
+			}else{
+				try {
+					var dataObj = JSON.parse(data.body)
+				}catch(e){
+					var dataObj = {}
+				}
+				if (dataObj.error) {
+					consolelogs('DB Error')
+					//consolelogs(data.body)
+					send404()
+				}else{ 
+					//consolelogs(data)
+					var templateFn = dot.template(data.body)
+					nextAction(templateFn, section)
+				}
+			}
+		})
+
 	}
 	
 };

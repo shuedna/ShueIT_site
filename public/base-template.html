@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>{{=it.title}}</title>
+  	<meta name="description" content="{{=it.description}}">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic|Oswald|Suez+One|Permanent+Marker">
+	<link href="/css/normalize.css" rel="stylesheet">
+	<link href="/css/milligram.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+	<div class="container header">
+	  <div class="row header">
+		<div class="column">
+		  <h1 class="margin title">Shue-IT
+			<a class="icon" id="menubtn" href="javascript:void(0)">
+			  <div class="flex-col iconSize">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			  </div>
+			</a>
+		  </h1>
+		</div>
+	    <div class="column">
+		  <div class="row header menu" id="menuBody">
+			<a class="column button" href="/">Home</a>
+			<a class="column button" href="/blog.html">My blog</a>
+			<a class="column button" href="/portfolio.html">Portfolio</a>
+			<a class="column button" href="/about.html">About</a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+{{=it.page}}
+	<div class ="container footer">
+		<div class="row">
+			<div class="column addthis_inline_share_toolbox center margin"></div>
+		</div>
+	</div>
+	<div class="messageBox hide header container" id="messageBox">
+		<h3 class="title margin">Message Me
+		  <a class="icon2 xbtn" href="javascript:void(0)"><image src="/images/close.png"></image></a>
+		</h3>
+		<div class="row">
+			<label class="column">Name<input class="button msg" id="messageName"></label>
+			<label class="column">Email<input class="button msg" id="messageEmail"></label>
+		</div>
+		<label class="column">Subject<input class="button msg" id="messageSubject"></label>
+		<label class="column">Message<textarea class="button msg" id="messageBody"></textarea></label>
+		<div class="g-recaptcha cptaMargin" data-sitekey="6Ld0ohUUAAAAAExA58KtD3x5yx1BLSUkIF-fLtEb"></div>
+		<div class="row">
+			<div class="column textright"><button disabled="disabled" id="sendMessage" class="button width50">Submit</button></div>
+			<div class="column textleft xbtn" ><button class="button width50">Close</button></div>
+		</div>
+	</div>
+	<script async type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58ad888c7c4482ac"></script>
+	<script
+  		src="https://code.jquery.com/jquery-3.2.1.min.js"
+  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  		crossorigin="anonymous">
+	</script>
+	<script src="/js/scripts.js"></script>
+	<script async src="/js/email.js"></script>
+	<script async  src='https://www.google.com/recaptcha/api.js'></script>
+  </body>
+</html>		
