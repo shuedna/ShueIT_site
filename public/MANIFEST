@@ -1,0 +1,15 @@
+This zip file contains optimized resources for http://www.shueit.net/about.html. The optimized resources are listed below in the format of: 
+filename: url
+
+Note: We only include up to 10 MB of optimized contents. If the
+optimized contents of your page are larger than 10 MB, we list them in
+this file too, with 'NOT INCLUDED' to indicate those URLs require
+further optimization.
+
+image/me.jpg: https://cdb.shueit.net/images/me.jpg/me.jpg
+image/exam-410.png: http://www.shueit.net/images/exam-410.png
+image/nodejs-logo.png: http://www.shueit.net/images/nodejs-logo.png
+image/CouchDB.png: http://www.shueit.net/images/CouchDB.png
+image/pouchdb.png: http://www.shueit.net/images/pouchdb.png
+image/milligram-long.png: http://www.shueit.net/images/milligram-long.png
+image/close.png: http://www.shueit.net/images/close.png
