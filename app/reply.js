@@ -1,12 +1,28 @@
 "use strict"
 // send http reply
 
+var zlib = require('zlib')
+
 var consoleLogsOn = false;
 
-function send (response, data) {
+function send (request, response, data) {
+	consolelogs(request.headers['accept-encoding'])
 	consolelogs(data.head +':'+ data.type)
-	response.writeHead(data.head, {"Content-Type":data.type})
-	response.end(data.contents)
+	if (request.headers['accept-encoding'].includes('gzip')) {
+		consolelogs('gzip')
+		zlib.gzip(data.contents, function(error, result){
+			if (error) {
+				response.writeHead(data.head, {"Content-Type":data.type,"Cache-Control":"public;max-age:86400"})
+				response.end(data.contents)
+			}else{
+				response.writeHead(data.head, {"Content-Type":data.type,"Cache-Control":"public;max-age:86400","Content-Encoding":"gzip"})
+				response.end(result)
+			}
+		})	
+	}else{
+		response.writeHead(data.head, {"Content-Type":data.type,"Cache-Control":"public;max-age:86400"})
+		response.end(data.contents)
+	}
 }
 
 

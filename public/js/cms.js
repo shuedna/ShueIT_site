@@ -110,7 +110,7 @@
 			"descrpt" : $('#descrpt').val(),
 			"imageUrl" : $('#imageUrl').val(),
 			"link" : '/blog/' + $('#bloglink').val(),
-			"templateUrl": "http://localhost:5984/templates/Template1/template.html",
+			"templateUrl": "http://cdb.shueit.net/templates/Template1/template.html",
 			"time":Date.now(),
 			"date":dateFormat(Date.now),
 			"section":{

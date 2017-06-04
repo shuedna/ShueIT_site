@@ -9,7 +9,7 @@ var req = require('request');
 
 
 var db = 'https://cdb.shueit.net';
-var consoleLogsOn = true;
+var consoleLogsOn = false
 
 function handle (request, response, type) {
 	var data = {};
@@ -54,6 +54,8 @@ function handle (request, response, type) {
 					var section = {}
 					section.rows = body.rows
 					section.title = "Shue IT Home"
+					section.description = "Shue Information Technology Small Business SMB Small Office Home Office SOHO Tech services. Web Development, Networking LAN Wifi, Client and Server systems. Utica Rome Oneida Lewis Herkimer Counties New York"
+					consolelogs(section.description)
 					var templateUrl = (db + '/templates/index/index2.html')
 					getTemplate(templateUrl, section, function (templateFn, section) { 
 						buildPage (templateFn, section)
@@ -169,6 +171,7 @@ function handle (request, response, type) {
 		function finalBuild(baseTemplateFn) {
 			var contents = {};
 			contents.title = section.title
+			contents.description = section.description
 			contents.page = templateFn(section)
 			data.contents = baseTemplateFn(contents)
 			sendFile(data)
@@ -196,7 +199,7 @@ function handle (request, response, type) {
 	function sendFile (data){
 		consolelogs('Send Page')
 		consolelogs(data.type)
-		reply.send(response, data)
+		reply.send(request, response, data)
 	}
  
 	function getTemplate (templateUrl, section, nextAction) {

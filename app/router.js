@@ -11,7 +11,7 @@ var consoleLogsOn = false;
 
 function route (request, response, body) {
 	consolelogs('Route:' + request.url)
-	if ((request.url).endsWith('.html')||(request.url).endsWith('/')) {
+	if ((request.url).endsWith('.html')&&!(request.url).endsWith('cms.html')||(request.url).endsWith('/')) {
 		generator.handle(request, response, 'page')
 	}else if((request.url).startsWith('/post')){
 		post.handle(request, response, body)

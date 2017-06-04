@@ -31,10 +31,11 @@ a{color:#000004;}
 .icon{width:55px;float:right;}
 .icon2{width:40px;float:right;}
 .button > img{width:100%;margin-top:12.5%;}
-.flex-70{display:block;flex:0 0 70%;margin-left:0;max-width:100%;width:100%;;}
+.flex-70{display:block;flex:0 0 70%;margin-left:0;max-width:100%;width:100%;}
 .img1{width:65.59%;}
 .img2{width:87.5%;}
 .img3{width:50%;}
+#spinContent{padding-top:15px;padding-bottom:15px;}
 .imgquarter{width:24%;}
 .me{border:solid;border-radius:50%;width:50%;margin-left:25%;}
 .date{text-align:left;}

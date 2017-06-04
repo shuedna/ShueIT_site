@@ -60,7 +60,7 @@ function handle (request, response) {
 	
 	function sendFile (data){
 		consolelogs(data.type)
-		reply.send(response, data)
+		reply.send(request, response, data)
 	}
 }
 

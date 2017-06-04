@@ -8,6 +8,7 @@ var port = "3000";
 var consoleLogsOn = false;
 
 var server = http.createServer(function(request, response){
+	consolelogs(request)
 	var body = "";
 	request.on('data',function(chunk){
 		body += chunk
