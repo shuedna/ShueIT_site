@@ -2,8 +2,8 @@
 
 (function () {
 	
-	//var db = new PouchDB('http://127.0.0.1:5984/blog')
-	//var imagedb = new PouchDB('http://127.0.0.1:5984/images')
+	var remotedb = new PouchDB('https://cdb.shueit.net/blog', {skip_setup: true})
+	var remoteimagedb = new PouchDB('https://cdb.shueit.net/images', {skip_setup: true})
 
 	var db = new PouchDB('blog')
 	var imagedb = new PouchDB('images')
@@ -24,15 +24,27 @@
 	}
 	
 	function login (){
-		cmsBodyToggle('show');
-		$('#login >').addClass('hide');
-		$('#menubtn').addClass('hide')
-		$('#logoutbtn').removeClass('hide')
+		remotedb.login($('#user').val(),$('#pass').val(),function (err,response) {
+			if (err) {
+				console.log(err)
+				alert(err)
+				return
+			}
+			console.log(response)
+			cmsBodyToggle('show');
+			$('#login >').addClass('hide');
+			$('#menubtn').addClass('hide')
+			$('#logoutbtn').removeClass('hide')
+			$('#user').val("")
+			$('#pass').val("")
+		})
 	}
 	
 	function cmsBodyToggle(action){
 		if (action == 'show') {
 			$('#cmsbody').removeClass('hide')
+		}else if (action == 'hide'){
+			$('#cmsbody').addClass('hide')
 		}
 	}
 	
@@ -115,7 +127,7 @@
 			"link" : '/blog/' + $('#bloglink').val(),
 			"templateUrl": "http://cdb.shueit.net/templates/Template1/template.html",
 			"time":Date.now(),
-			"date":dateFormat(Date.now),
+			"date":dateFormat(),
 			"section":{
 				"title": $('#title').val(),
 				"body": tinyMCE.activeEditor.getContent()
@@ -127,9 +139,9 @@
 		})
 	}
 	
-	function dateFormat(secs) {
-		var tempDate = new Date(secs);
-		var month = tempDate.getMonth + 1;
+	function dateFormat() {
+		var tempDate = new Date();
+		var month = tempDate.getMonth() + 1;
 		var date = tempDate.getDate();
 		var year = tempDate.getFullYear()
 		return (month + '/' + date + '/' + year)
@@ -175,14 +187,14 @@
 	})
 
 	$('#syncbtn').on('click',function () {
-		db.replicate.to('https://cdb.shueit.net/blog').then(function (result) {lt
-			}).catch(function (err) {
-			  console.log(err);
-			});
-		imagesdb.replicate.to('https://cdb.shueit.net/images').then(function (result) {
-			}).catch(function (err) {
-			  console.log(err);
-			});
+		db.replicate.to('https://cdb.shueit.net/blog', function (err,result) {
+			if (err) {console.log(err)}
+			console.log(result)
+		});
+		imagedb.replicate.to('https://cdb.shueit.net/images', function (err,result) {
+			if (err) {console.log(err)}
+			console.log(result)
+		});
 	})
 	
 	$('#gridbtn').on('click',function () {
@@ -202,6 +214,18 @@
 	//submit blog listener
 	$('#blogSubmit').on('click', function () {
 		sendBlog()
+	})
+
+	$('#logoutbtn').on('click', function () {
+		remotedb.logout(function (err, response) {
+  			if (err) {
+    		console.log(err)
+  			}
+  			cmsBodyToggle('hide');
+			$('#login >').removeClass('hide');
+			$('#menubtn').removeClass('hide')
+			$('#logoutbtn').addClass('hide')
+		})
 	})
 	
 	console.log('script')

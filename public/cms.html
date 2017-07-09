@@ -4,7 +4,7 @@
   <title>Shue-IT Blog</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic|Oswald|Suez+One|Permanent+Marker">
 	<script src="//cloud.tinymce.com/stable/tinymce.min.js"></script>
 	<script>tinymce.init({
   selector: 'textarea#tinyMce',
@@ -17,9 +17,9 @@
   ],
   toolbar: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image| code'
 });</script>
-	<link href="../css/normalize.css" rel="stylesheet">
-	<link href="..//css/milligram.css" rel="stylesheet">
-    <link href="..//css/styles.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
   </head>
   <body>
 	<div class="container header">
@@ -57,11 +57,11 @@
 						<button class="button" id="blogSubmit">Submit</button>
 						<form>
 						  <div class="row">
-						    <label class="column">Blog Name:<input class="button buttonWhite" id="title" ></label>    
-						    <label class="column">Blog link:<input class="button buttonWhite" id="bloglink" ></label>
+						    <label class="column">Blog Name:<input class="~button ~buttonWhite" id="title" ></label>    
+						    <label class="column">Blog link:<input class="~button ~buttonWhite" id="bloglink" ></label>
 						  </div> 
-							<label>Image Path:<input class="button buttonWhite" id="imageUrl" ></label>
-						  <label>Description:<textarea class="button buttonWhite" id="descrpt"></textarea></label>
+							<label>Image Path:<input class="~button ~buttonWhite" id="imageUrl" ></label>
+						  <label>Description:<textarea class="~button ~buttonWhite" id="descrpt"></textarea></label>
 						  <textarea id="tinyMce"></textarea>
 						</form>
 					</div>
@@ -105,6 +105,7 @@
 	</div>
 	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pouchdb/6.1.2/pouchdb.min.js"></script>
+	<script type="text/javascript" src="../js/pouchdb.authentication.min.js"></script>
 	<script type="text/javascript" src="../js/cms.js"></script>
   </body>
 </html>		

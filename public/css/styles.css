@@ -1,5 +1,6 @@
 body{padding:0;background-color:#FBFEF9;color:#000004;}
-a{color:#000004;}
+a{color:#000004;} 
+p>a {color:blue;}
 .codeIcon{float:right;width:150px;height:150px;margin-left:10px;}
 .codeIcon div:nth-child(1){position:relative;top:45px;left:27px;height:50px;width:50px;border-top:solid;border-left:solid;border-width:3px;border-color:#00588E;transform:rotate(-45deg);}
 .codeIcon div:nth-child(2){position:relative;top:19px;left:27px;height:0px;width:85px;border-top:solid;border-width:3px;border-color:#00588E;transform:rotate(-70deg);}
