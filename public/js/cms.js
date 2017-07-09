@@ -2,8 +2,11 @@
 
 (function () {
 	
-	var db = new PouchDB('http://127.0.0.1:5984/blog')
-	var imagedb = new PouchDB('http://127.0.0.1:5984/images')
+	//var db = new PouchDB('http://127.0.0.1:5984/blog')
+	//var imagedb = new PouchDB('http://127.0.0.1:5984/images')
+
+	var db = new PouchDB('blog')
+	var imagedb = new PouchDB('images')
 	
 	var filelist = {};
 	
@@ -169,6 +172,17 @@
 	//event listeners for list/grid view btns
 	$('#listbtn').on('click',function () {
 		$('#cmsbody > div').removeClass('row')
+	})
+
+	$('#syncbtn').on('click',function () {
+		db.replicate.to('https://cdb.shueit.net/blog').then(function (result) {lt
+			}).catch(function (err) {
+			  console.log(err);
+			});
+		imagesdb.replicate.to('https://cdb.shueit.net/images').then(function (result) {
+			}).catch(function (err) {
+			  console.log(err);
+			});
 	})
 	
 	$('#gridbtn').on('click',function () {

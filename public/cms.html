@@ -43,17 +43,27 @@
 		<div class ="row mobilehideblock">
 			<div class="column center">
 				<a class="" id="gridbtn" href="javascript:void(0)"><img class ="button btnImg" src="../images/grid.png"></a>
-				<a class="" id="listbtn" href="javascript:void(0)"><img class ="button btnImg" src="../images/list.png"></a>				
+				<a class="" id="listbtn" href="javascript:void(0)"><img class ="button btnImg" src="../images/list.png"></a>
+				<a class="" id="syncbtn" href="javascript:void(0)"><img class ="button btnImg" src="../images/list.png"></a>				
 			</div>
 		</div>
 		<div class ="row">
 			<div class="column">
 				<div class="center">
-					<h3 class="bgblue">Messages
-						<a class="icon2 dropbtn" id="dropbtn1" href="javascript:void(0)"><img src="../images/down.png"><img  class="hide" src="../images/up.png"></a>
+					<h3 class="bgblue">Submit Blog
+						<a class="icon2 dropbtn" id="dropbtn4" href="javascript:void(0)"><img src="../images/down.png"><img  class="hide" src="../images/up.png"></a>
 					</h3>
-					<div class="hide" id="div1">
-						
+					<div class="hide dropbtn4" id="div4">
+						<button class="button" id="blogSubmit">Submit</button>
+						<form>
+						  <div class="row">
+						    <label class="column">Blog Name:<input class="button buttonWhite" id="title" ></label>    
+						    <label class="column">Blog link:<input class="button buttonWhite" id="bloglink" ></label>
+						  </div> 
+							<label>Image Path:<input class="button buttonWhite" id="imageUrl" ></label>
+						  <label>Description:<textarea class="button buttonWhite" id="descrpt"></textarea></label>
+						  <textarea id="tinyMce"></textarea>
+						</form>
 					</div>
 				</div>
 				<div class="center">
@@ -78,20 +88,11 @@
 					</div>
 				</div>
 				<div class="center">
-					<h3 class="bgblue">Submit Blog
-						<a class="icon2 dropbtn" id="dropbtn4" href="javascript:void(0)"><img src="../images/down.png"><img  class="hide" src="../images/up.png"></a>
+					<h3 class="bgblue">Messages
+						<a class="icon2 dropbtn" id="dropbtn1" href="javascript:void(0)"><img src="../images/down.png"><img  class="hide" src="../images/up.png"></a>
 					</h3>
-					<div class="hide dropbtn4" id="div4">
-						<button class="button" id="blogSubmit">Submit</button>
-						<form>
-						  <div class="row">
-						    <label class="column">Blog Name:<input class="button buttonWhite" id="title" ></label>    
-						    <label class="column">Blog link:<input class="button buttonWhite" id="bloglink" ></label>
-						  </div> 
-							<label>Image Path:<input class="button buttonWhite" id="imageUrl" ></label>
-						  <label>Description:<textarea class="button buttonWhite" id="descrpt"></textarea></label>
-						  <textarea id="tinyMce"></textarea>
-						</form>
+					<div class="hide" id="div1">
+						
 					</div>
 				</div>
 			</div>
